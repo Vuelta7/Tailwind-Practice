@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <title>Fitness</title>
     <style type="text/tailwindcss">
-        @theme {
-            --color-light-green: #89C5CC; 
-        }
+      @theme {
+        --color-light-green: #89c5cc;
+        --color-btn-clr: #69b99d;
+        --color-desc: #7d7987;
+      }
     </style>
-</head>
-<body class="bg-white">
+  </head>
+  <body class="bg-white">
     <nav class="flex justify-center items-center text-xl font-semibold pt-15">
-        <p class="text-light-green mr-[70vh]">Treine.me</p>
-        <ul class="flex gap-15">
-            <li>Home</li>
-            <li>About</li>
-            <li>Training</li>
-        </ul>
+      <p class="text-light-green mr-[70vh]">Treine.me</p>
+      <ul class="flex gap-15">
+        <li>Home</li>
+        <li>About</li>
+        <li>Training</li>
+      </ul>
     </nav>
-</body>
+
+    <div class="flex justify-center items-center p-35">
+      <div class="w-[560px]">
+        <h1 class="text-5xl mb-5 font-[Mulish] leading-snug">
+          WORKOUTS MADE <b class="text-light-green">EXCLUSIVE</b> FOR YOU!
+        </h1>
+        <p class="text-desc mb-10 text-left">
+          We create <b>exclusive and unique workouts</b> for you. Invest in your
+          body and <b>get much more performance</b> and quality of life.
+        </p>
+        <button class="bg-btn-clr flex px-10 py-5 gap-2 rounded">
+          <img src="viber.png" />
+          <p class="font-sans text-white">Start now</p>
+        </button>
+      </div>
+      <img src="fitness.png" />
+    </div>
+
+    <footer class="flex justify-center items-center">
+      <p>send us a message <b>@treine.me</b></p>
+    </footer>
+  </body>
 </html>
