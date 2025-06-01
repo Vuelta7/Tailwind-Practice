@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="flex h-screen flex-col gap-[14px] bg-[#202124] font-sans text-white"
+  >
+    <header class="flex items-center justify-between p-[14px]">
+      <nav class="flex items-center gap-[14px]">
+        <a
+          class="cursor-pointer text-[0.8em] text-gray-300 no-underline"
+          href=""
+        >
+          <p>About</p>
+        </a>
+        <a
+          class="cursor-pointer text-[0.8em] text-gray-300 no-underline"
+          href=""
+        >
+          <p>Store</p>
+        </a>
+      </nav>
+      <section class="flex items-center gap-[14px]">
+        <a class="cursor-pointer text-[0.8em] text-white no-underline" href="">
+          <p>Gmail</p>
+        </a>
+        <a class="cursor-pointer text-[0.8em] text-white no-underline" href="">
+          <p>Images</p>
+        </a>
+        <a
+          class="cursor-pointer text-[0.8em] no-underline brightness-0 invert filter"
+          href=""
+        >
+          <img src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" />
+        </a>
+        <a>
+          <img
+            class="max-w-[48px] rounded-[50%] border-[2px] border-cyan-400"
+            src="ME.JPG"
+          />
+        </a>
+      </section>
+    </header>
+    <main
+      class="flex flex-1 flex-col items-center justify-center gap-[24px] px-[14px] py-0"
+    >
+      <div>
+        <h1 class="font-mono text-[4em]">Google!</h1>
+      </div>
+      <div
+        class="max-w-[700px]gap-[14px] mx-auto my-0 flex w-[100%] rounded-[24px] border-[1px] border-[#6b7280] p-[14px] hover:border-transparent hover:bg-[#334155]"
+      >
+        <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        <input class="flex-1 border-0 bg-transparent text-white outline-none" />
+        <div class="flex items-center gap-[14px]">
+          <button class="border-none bg-transparent text-[1.2em] text-white">
+            <i class="fa-solid fa-microphone"></i>
+          </button>
+          <button class="border-none bg-transparent text-[1.2em] text-white">
+            <i class="fa-solid fa-camera"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex items-center gap-[14px]">
+        <button><p>Google Search</p></button>
+        <button><p>I'm Feeling Lucky</p></button>
+      </div>
+      <div class="text-[0.9em]">
+        <p>Google offered in: <span class="text-cyan-400">Filipino</span></p>
+      </div>
+    </main>
+    <footer class="flex flex-col">
+      <section class="p-[14px]">
+        <p>Philippines</p>
+      </section>
+      <section
+        class="flex flex-col items-center justify-around border-t-[1px] border-t-gray-600 p-[14px] sm:flex-row"
+      >
+        <div class="flex cursor-pointer items-center gap-[18px]">
+          <a>Advertising</a>
+          <a>Business</a>
+          <a>How Search Works</a>
+        </div>
+        <div class="flex cursor-pointer items-center gap-[18px]">
+          <a>Privacy</a>
+          <a>Terms</a>
+          <a>Settings</a>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
