@@ -5,9 +5,9 @@
 }
 
 body {
-  background-color: gray;
+  background-color: #202124;
   color: white;
-  padding: 14px;
+  /* padding: 14px; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,6 +19,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 14px;
 }
 
 nav,
@@ -28,9 +29,20 @@ section {
   gap: 14px;
 }
 
+.profilePic {
+  max-width: 48px;
+  border-radius: 50%;
+  border: 2px solid cyan;
+}
+
+button {
+  cursor: pointer;
+}
+
 a {
   text-decoration: unset;
   font-size: 0.8em;
+  cursor: pointer;
 }
 
 a:hover {
@@ -45,6 +57,10 @@ a:hover {
   color: white;
 }
 
+.menuButton {
+  filter: brightness(0) invert(1);
+}
+
 main {
   flex: 1;
   display: flex;
@@ -52,8 +68,107 @@ main {
   align-items: center;
   justify-content: center;
   gap: 24px;
+  padding: 0 14px;
 }
 
 .headerText {
   font-size: 4em;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+
+.searchBar {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  gap: 14px;
+  border: 1px solid #6b7280;
+  padding: 14px;
+  border-radius: 24px;
+}
+
+.searchBar:hover {
+  border-color: transparent;
+  background-color: #334155;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: unset;
+  color: white;
+  flex: 1;
+}
+
+.searchButtonsContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.searchButtonsContainer button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #334155;
+  color: white;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.searchButtonsContainer button:hover {
+  border: 1px solid darkgray;
+}
+
+.iconButton {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+.iconButtonsContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.languageSelection {
+  font-size: 0.9em;
+}
+
+.languageSelection span {
+  color: cyan;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer > section {
+  padding: 14px;
+}
+footer > section:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid darkgray;
+  flex-direction: column;
+}
+
+.footerLink {
+  display: flex;
+  align-self: center;
+  gap: 8px;
+}
+
+.footerLink a {
+  cursor: pointer;
+}
+
+@media (min-width: 540px) {
+  footer > section:last-child {
+    flex-direction: row;
+  }
 }

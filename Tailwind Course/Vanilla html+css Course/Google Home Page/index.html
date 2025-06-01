@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -23,11 +30,11 @@
         <a class="whiteLink" href="">
           <p>Images</p>
         </a>
-        <a class="whiteLink" href="">
-          <img />
+        <a class="menuButton" href="">
+          <img src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" />
         </a>
-        <a href="">
-          <img />
+        <a>
+          <img class="profilePic" src="ME.JPG" />
         </a>
       </section>
     </header>
@@ -35,18 +42,21 @@
       <div>
         <h1 class="headerText">Google!</h1>
       </div>
-      <div>
+      <div class="searchBar">
+        <div><i class="fa-solid fa-magnifying-glass"></i></div>
         <input />
-        <div>
-          <button>icon</button>
-          <button>icon</button>
+        <div class="iconButtonsContainer">
+          <button class="iconButton">
+            <i class="fa-solid fa-microphone"></i>
+          </button>
+          <button class="iconButton"><i class="fa-solid fa-camera"></i></button>
         </div>
       </div>
-      <div>
+      <div class="searchButtonsContainer">
         <button><p>Google Search</p></button>
         <button><p>I'm Feeling Lucky</p></button>
       </div>
-      <div>
+      <div class="languageSelection">
         <p>Google offered in:<span> Filipino</span></p>
       </div>
     </main>
@@ -55,12 +65,12 @@
         <p>Philippines</p>
       </section>
       <section>
-        <div>
+        <div class="footerLink">
           <a>Advertising</a>
           <a>Business</a>
           <a>How Search Works</a>
         </div>
-        <div>
+        <div class="footerLink">
           <a>Privacy</a>
           <a>Terms</a>
           <a>Settings</a>
