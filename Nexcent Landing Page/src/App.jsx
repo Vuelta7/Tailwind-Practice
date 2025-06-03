@@ -80,7 +80,7 @@ function App() {
           </div>
         </section>
         <section className="clientSection">
-          <p className="headingText clientHeading">Our Clients</p>
+          <p className="headingText headingTextSize">Our Clients</p>
           <p className="grayLink">
             We have been working with some Fortune 500+ clients
           </p>
@@ -106,33 +106,37 @@ function App() {
           </ul>
         </section>
         <section className="suitableSection">
-          <div>
-            <p className="headingText">
+          <div className="SuitableSectionText">
+            <h2 className="headingText headingTextSize bottomGap">
               Manage your entire community in a single system
-            </p>
+            </h2>
             <p className="grayLink">Who is Nexcent suitable for?</p>
           </div>
-          <div className="suitableCard">
-            <div>
+          <div className="suitableCardContainer">
+            <div className="suitableCard">
               <img src={SuitableClient1}></img>
-              <p className="headingText">Membership Organisations</p>
-              <p className="graylink">
+              <p className="headingText headingTextSize">
+                Membership Organisations
+              </p>
+              <p className="grayLink">
                 Our membership management software provides full automation of
                 membership renewals and payments
               </p>
             </div>
             <div className="suitableCard">
               <img src={SuitableClient2}></img>
-              <p className="headingText">National Associations</p>
-              <p className="graylink">
+              <p className="headingText headingTextSize">
+                National Associations
+              </p>
+              <p className="grayLink">
                 Our membership management software provides full automation of
                 membership renewals and payments
               </p>
             </div>
             <div className="suitableCard">
               <img src={SuitableClient3}></img>
-              <p className="headingText">Clubs And Groups</p>
-              <p className="graylink">
+              <p className="headingText headingTextSize">Clubs And Groups</p>
+              <p className="grayLink">
                 Our membership management software provides full automation of
                 membership renewals and payments
               </p>
@@ -141,25 +145,29 @@ function App() {
         </section>
         <section className="detailsSection">
           <img src={DetailsSection} />
-          <p className="headingText">
-            The unseen of spending three years at Pixelgrade
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-            Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
-            tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
-            Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
-            elementum pulvinar odio.
-          </p>
-          <button className="primaryButton">Learn More</button>
+          <div>
+            <p className="headingText headingTextSize bottomGap">
+              The unseen of spending three years at Pixelgrade
+            </p>
+            <p className="grayLink bottomGap">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+              Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+              tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+              Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+              elementum pulvinar odio.
+            </p>
+            <button className="primaryButton">Learn More</button>
+          </div>
         </section>
         <section className="assuranceSection">
           <div>
             <p className="headingText">
               Helping a local business reinvent itself
             </p>
-            <p>We reached here with our hard work and dedication</p>
+            <p className="">
+              We reached here with our hard work and dedication
+            </p>
           </div>
           <div>
             <div>
@@ -198,7 +206,7 @@ function App() {
             <p className="headingText">
               How to design your site footer like we did
             </p>
-            <p>
+            <p className="grayLink">
               Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
               augue nec tincidunt molestie, massa nunc varius arcu, at
               scelerisque elit erat a magna. Donec quis erat at libero ultrices
