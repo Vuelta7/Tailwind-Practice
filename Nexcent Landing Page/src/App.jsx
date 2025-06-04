@@ -31,10 +31,10 @@ import ReadMorePhoto3 from "./assets/readMorePhoto3.png";
 function App() {
   return (
     <>
-      <nav>
+      <nav className="flex h-[10vh] items-center justify-between bg-[#f5f7fa] px-[5em] py-[2em]">
         <img src={Logo}></img>
-        <ul className="navMenu">
-          <li className="navMenutext">
+        <ul className="flex list-none items-center gap-[3em] font-medium text-[#1f2937] no-underline">
+          <li>
             <a>Home</a>
           </li>
           <li>
@@ -53,38 +53,44 @@ function App() {
             <a>FAQ</a>
           </li>
         </ul>
-        <div className="divider">
-          <button className="secondaryButton">
+        <div className="flex gap-[1em]">
+          <button className="border-none bg-transparent px-6 py-2 text-[#4caf4f]">
             <p>Login</p>
           </button>
-          <button className="primaryButton">
+          <button className="w-fit rounded bg-[#4caf4f] px-6 py-2 text-white transition hover:bg-[#43a047]">
             <p>Sign Up</p>
           </button>
         </div>
       </nav>
+
       <main>
-        <section className="headingSection">
-          <div className="headingDivision">
-            <div className="headingContainer">
-              <h1 className="headingText">
+        {/* Heading Section */}
+        <section className="flex h-[90vh] w-[100vw] items-center justify-center bg-[#f5f7fa] p-[5em]">
+          <div className="flex gap-60">
+            <div className="flex w-200 flex-col justify-center gap-[2em]">
+              <h1 className="text-[4em] font-semibold text-[#4d4d4d]">
                 Lessons and insights{" "}
-                <span className="primaryColor">from 8 years</span>
+                <span className="text-[#4caf4f]">from 8 years</span>
               </h1>
-              <p className="grayLink">
+              <p className="text-[#717171]">
                 Where to grow your business as a photographer: site or social
                 media?
               </p>
-              <button className="primaryButton">Register</button>
+              <button className="w-fit rounded bg-[#4caf4f] px-6 py-2 text-white transition hover:bg-[#43a047]">
+                Register
+              </button>
             </div>
-            <img src={Illustration}></img>
+            <img className="h-[30em]" src={Illustration}></img>
           </div>
         </section>
-        <section className="clientSection">
-          <p className="headingText headingTextSize">Our Clients</p>
-          <p className="grayLink">
+
+        {/* Clients Section */}
+        <section class="my-[5vh] flex flex-col items-center justify-center px-[3em]">
+          <p className="text-[2em] font-semibold text-[#4d4d4d]">Our Clients</p>
+          <p className="text-[#717171]">
             We have been working with some Fortune 500+ clients
           </p>
-          <ul>
+          <ul className="mt-[2vh] flex list-none gap-[12em] no-underline">
             <li>
               <img src={Client1}></img>
             </li>
@@ -105,51 +111,53 @@ function App() {
             </li>
           </ul>
         </section>
-        <section className="suitableSection">
-          <div className="SuitableSectionText">
-            <h2 className="headingText headingTextSize bottomGap">
+        <section className="flex flex-col items-center justify-center px-[5em] text-center">
+          <div className="mb-[2em] w-[25vw]">
+            <h2 className="mb-[1.5vh] text-[2em] font-semibold text-[#4d4d4d]">
               Manage your entire community in a single system
             </h2>
-            <p className="grayLink">Who is Nexcent suitable for?</p>
+            <p className="text-[#717171]">Who is Nexcent suitable for?</p>
           </div>
-          <div className="suitableCardContainer">
-            <div className="suitableCard">
+          <div className="flex gap-[8em]">
+            <div className="flex w-[15vw] flex-col items-center justify-center gap-[1em] rounded-[10px] bg-white p-[2em] text-center shadow-md">
               <img src={SuitableClient1}></img>
-              <p className="headingText headingTextSize">
+              <p className="text-[2em] font-semibold text-[#4d4d4d]">
                 Membership Organisations
               </p>
-              <p className="grayLink">
+              <p className="text-[#717171]">
                 Our membership management software provides full automation of
                 membership renewals and payments
               </p>
             </div>
-            <div className="suitableCard">
+            <div className="flex w-[15vw] flex-col items-center justify-center gap-[1em] rounded-[10px] bg-white p-[2em] text-center shadow-md">
               <img src={SuitableClient2}></img>
-              <p className="headingText headingTextSize">
+              <p className="text-[2em] font-semibold text-[#4d4d4d]">
                 National Associations
               </p>
-              <p className="grayLink">
+              <p className="text-[#717171]">
                 Our membership management software provides full automation of
                 membership renewals and payments
               </p>
             </div>
-            <div className="suitableCard">
+            <div className="flex w-[15vw] flex-col items-center justify-center gap-[1em] rounded-[10px] bg-white p-[2em] text-center shadow-md">
               <img src={SuitableClient3}></img>
-              <p className="headingText headingTextSize">Clubs And Groups</p>
-              <p className="grayLink">
+              <p className="text-[2em] font-semibold text-[#4d4d4d]">
+                Clubs And Groups
+              </p>
+              <p className="text-[#717171]">
                 Our membership management software provides full automation of
                 membership renewals and payments
               </p>
             </div>
           </div>
         </section>
-        <section className="detailsSection">
+        <section className="flex items-center justify-center gap-[5vw] px-[5em] py-[2em]">
           <img src={DetailsSection} />
-          <div>
-            <p className="headingText headingTextSize bottomGap">
+          <div className="w-[28vw]">
+            <p className="bottomGap text-[2em] font-semibold text-[#4d4d4d]">
               The unseen of spending three years at Pixelgrade
             </p>
-            <p className="grayLink bottomGap">
+            <p className="bottomGap text-[#717171]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
               amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
               Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
@@ -157,13 +165,16 @@ function App() {
               Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
               elementum pulvinar odio.
             </p>
-            <button className="primaryButton">Learn More</button>
+            <button className="w-fit rounded bg-[#4caf4f] px-6 py-2 text-white transition hover:bg-[#43a047]">
+              Learn More
+            </button>
           </div>
         </section>
+
         {/* Assurance Section */}
-        <section className="flex bg-[#f5f7fa] p-16 justify-center items-center gap-32">
+        <section className="flex items-center justify-center gap-32 bg-[#f5f7fa] p-16">
           <div className="max-w-md">
-            <p className="text-3xl font-medium text-gray-800 leading-snug">
+            <p className="text-3xl leading-snug font-medium text-gray-800">
               Helping a local{" "}
               <span className="text-[#4caf4f]">business reinvent itself</span>
             </p>
@@ -174,7 +185,7 @@ function App() {
 
           <div className="grid grid-cols-2 gap-x-10 gap-y-6">
             <div className="flex items-center gap-4">
-              <img src={Assurance1} className="w-10 h-10" />
+              <img src={Assurance1} className="h-10 w-10" />
               <div>
                 <p className="text-lg font-semibold text-gray-800">2,245,341</p>
                 <p className="text-sm text-gray-500">Members</p>
@@ -182,7 +193,7 @@ function App() {
             </div>
 
             <div className="flex items-center gap-4">
-              <img src={Assurance2} className="w-10 h-10" />
+              <img src={Assurance2} className="h-10 w-10" />
               <div>
                 <p className="text-lg font-semibold text-gray-800">46,328</p>
                 <p className="text-sm text-gray-500">Clubs</p>
@@ -190,7 +201,7 @@ function App() {
             </div>
 
             <div className="flex items-center gap-4">
-              <img src={Assurance3} className="w-10 h-10" />
+              <img src={Assurance3} className="h-10 w-10" />
               <div>
                 <p className="text-lg font-semibold text-gray-800">828,867</p>
                 <p className="text-sm text-gray-500">Event Bookings</p>
@@ -198,7 +209,7 @@ function App() {
             </div>
 
             <div className="flex items-center gap-4">
-              <img src={Assurance4} className="w-10 h-10" />
+              <img src={Assurance4} className="h-10 w-10" />
               <div>
                 <p className="text-lg font-semibold text-gray-800">1,926,436</p>
                 <p className="text-sm text-gray-500">Payments</p>
@@ -207,7 +218,7 @@ function App() {
           </div>
         </section>
         {/* Design Section */}
-        <section className="flex items-center justify-center gap-16 p-16 bg-white">
+        <section className="flex items-center justify-center gap-16 bg-white p-16">
           <img
             src={DesignIllustration}
             alt="Design Illustration"
@@ -215,10 +226,10 @@ function App() {
           />
 
           <div className="max-w-xl">
-            <p className="text-3xl font-semibold text-gray-800 mb-4">
+            <p className="mb-4 text-3xl font-semibold text-gray-800">
               How to design your site footer like we did
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="mb-6 text-gray-600">
               Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
               augue nec tincidunt molestie, massa nunc varius arcu, at
               scelerisque elit erat a magna. Donec quis erat at libero ultrices
@@ -229,20 +240,20 @@ function App() {
               et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus
               ipsum id gravida.
             </p>
-            <button className="bg-[#4caf4f] text-white px-6 py-2 rounded hover:bg-[#43a047] transition">
+            <button className="w-fit rounded bg-[#4caf4f] px-6 py-2 text-white transition hover:bg-[#43a047]">
               Learn More
             </button>
           </div>
         </section>
-        <section className="flex items-start gap-10 p-10 bg-[#f5f7fa]">
+        <section className="flex items-start justify-center gap-10 bg-[#f5f7fa] p-10">
           <img
             src={CustomerPhoto}
             alt="Customer"
-            className="w-56 h-56 rounded-lg object-cover"
+            className="h-56 w-56 rounded-lg object-cover"
           />
 
           <div className="max-w-3xl">
-            <p className="text-gray-600 mb-4">
+            <p className="mb-4 text-gray-600">
               Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
               lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
               enim metus. Vivamus sed libero ornare, tristique quam in, gravida
@@ -255,12 +266,12 @@ function App() {
               condimentum id. Curabitur id nibh id sem dignissim finibus ac sit
               amet magna.
             </p>
-            <p className="text-[#4caf4f] font-medium">Tim Smith</p>
-            <p className="text-sm text-gray-500 mb-6">
+            <p className="font-medium text-[#4caf4f]">Tim Smith</p>
+            <p className="mb-6 text-sm text-gray-500">
               British Dragon Boat Racing Association
             </p>
 
-            <div className="flex items-center justify-between flex-wrap gap-4">
+            <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="flex gap-4">
                 <img src={Client1} className="h-6" />
                 <img src={Client2} className="h-6" />
@@ -270,103 +281,104 @@ function App() {
                 <img src={Client6} className="h-6" />
               </div>
 
-              <button className="flex items-center text-[#4caf4f] font-medium hover:underline">
+              <button className="flex items-center font-medium text-[#4caf4f] hover:underline">
                 Meet all customers
-                <img src={Arrow} className="ml-2 w-4 h-4" />
+                <img src={Arrow} className="ml-2 h-4 w-4" />
               </button>
             </div>
           </div>
         </section>
 
-        <section className="py-16 bg-white">
-          <div className="max-w-5xl mx-auto text-center px-4">
-            <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
+        <section className="bg-white py-16">
+          <div className="mx-auto max-w-5xl px-4 text-center">
+            <h2 className="mb-4 text-2xl font-semibold text-gray-800 md:text-3xl">
               Caring is the new marketing
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="mx-auto max-w-2xl text-gray-600">
               The Nexcent blog is the best place to read about the latest
               membership insights, trends and more. See who's joining the
               community, read about how our community are increasing their
               membership income and lot's more.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
+          <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-6 px-4 md:grid-cols-3">
             {/* Card 1 */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+            <div className="overflow-hidden rounded-xl bg-white shadow-md">
               <img
                 src={ReadMorePhoto1}
                 alt="OneRen"
-                className="w-full h-48 object-cover"
+                className="h-48 w-full object-cover"
               />
               <div className="p-5">
-                <p className="font-medium text-gray-800 mb-4">
+                <p className="mb-4 font-medium text-gray-800">
                   Creating Streamlined Safeguarding Processes with OneRen
                 </p>
-                <button className="text-green-600 font-semibold flex items-center gap-2 hover:underline">
-                  Readmore <img src={Arrow} alt="arrow" className="w-4 h-4" />
+                <button className="flex items-center gap-2 font-semibold text-green-600 hover:underline">
+                  Readmore <img src={Arrow} alt="arrow" className="h-4 w-4" />
                 </button>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+            <div className="overflow-hidden rounded-xl bg-white shadow-md">
               <img
                 src={ReadMorePhoto2}
                 alt="Safeguarding"
-                className="w-full h-48 object-cover"
+                className="h-48 w-full object-cover"
               />
               <div className="p-5">
-                <p className="font-medium text-gray-800 mb-4">
+                <p className="mb-4 font-medium text-gray-800">
                   What are your safeguarding responsibilities and how can you
                   manage them?
                 </p>
-                <button className="text-green-600 font-semibold flex items-center gap-2 hover:underline">
-                  Readmore <img src={Arrow} alt="arrow" className="w-4 h-4" />
+                <button className="flex items-center gap-2 font-semibold text-green-600 hover:underline">
+                  Readmore <img src={Arrow} alt="arrow" className="h-4 w-4" />
                 </button>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+            <div className="overflow-hidden rounded-xl bg-white shadow-md">
               <img
                 src={ReadMorePhoto3}
                 alt="Triathlon"
-                className="w-full h-48 object-cover"
+                className="h-48 w-full object-cover"
               />
               <div className="p-5">
-                <p className="font-medium text-gray-800 mb-4">
+                <p className="mb-4 font-medium text-gray-800">
                   Revamping the Membership Model with Triathlon Australia
                 </p>
-                <button className="text-green-600 font-semibold flex items-center gap-2 hover:underline">
-                  Readmore <img src={Arrow} alt="arrow" className="w-4 h-4" />
+                <button className="flex items-center gap-2 font-semibold text-green-600 hover:underline">
+                  Readmore <img src={Arrow} alt="arrow" className="h-4 w-4" />
                 </button>
               </div>
             </div>
           </div>
         </section>
-        <section className="demoSection">
-          <p className="demoHeading">
+        <section class="flex flex-col items-center justify-center bg-[#f5f7fa] p-[3vh]">
+          <p className="mb-[3vh] text-[3em] font-semibold text-[#263238]">
             Pellentesque suscipit fringilla libero eu.
           </p>
-          <button className="primaryButton">
+
+          <button className="flex text-[#4caf4f]">
             <p>Get a Demo</p>
             <img className={Arrow}></img>
           </button>
         </section>
       </main>
-      <footer className="bg-gray-900 text-white py-12 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <footer className="bg-gray-900 px-6 py-12 text-white">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-4">
           {/* Logo + Social */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="mb-4 flex items-center gap-2">
               <img src={Icon} alt="Nexcent Logo" className="h-6 w-auto" />
               <p className="text-lg font-semibold">Nexcent</p>
             </div>
             <p className="text-sm text-gray-400">
               Copyright © 2020 Nexcent ltd.
             </p>
-            <p className="text-sm text-gray-400 mb-4">All rights reserved</p>
-            <ul className="flex items-center gap-4 mt-2">
+            <p className="mb-4 text-sm text-gray-400">All rights reserved</p>
+            <ul className="mt-2 flex items-center gap-4">
               <li>
                 <img src={Instagram} alt="Instagram" className="h-5 w-5" />
               </li>
@@ -390,7 +402,7 @@ function App() {
 
           {/* Company */}
           <div>
-            <p className="font-semibold mb-4">Company</p>
+            <p className="mb-4 font-semibold">Company</p>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>About us</li>
               <li>Blog</li>
@@ -402,7 +414,7 @@ function App() {
 
           {/* Support */}
           <div>
-            <p className="font-semibold mb-4">Support</p>
+            <p className="mb-4 font-semibold">Support</p>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>Help center</li>
               <li>Terms of service</li>
@@ -414,17 +426,17 @@ function App() {
 
           {/* Newsletter */}
           <div>
-            <p className="font-semibold mb-4">Stay up to date</p>
-            <div className="flex items-center bg-gray-800 rounded-md overflow-hidden p-1">
+            <p className="mb-4 font-semibold">Stay up to date</p>
+            <div className="flex items-center overflow-hidden rounded-md bg-gray-800 p-1">
               <input
                 type="email"
                 placeholder="Your email address"
-                className="bg-transparent px-3 py-2 w-full text-sm text-white placeholder-gray-400 focus:outline-none"
+                className="w-full bg-transparent px-3 py-2 text-sm text-white placeholder-gray-400 focus:outline-none"
               />
               <img
                 src={Send}
                 alt="Send"
-                className="h-5 w-5 mr-3 cursor-pointer"
+                className="mr-3 h-5 w-5 cursor-pointer"
               />
             </div>
           </div>
