@@ -160,53 +160,65 @@ function App() {
             <button className="primaryButton">Learn More</button>
           </div>
         </section>
-        <section className="assuranceSection">
-          <div>
-            <p className="headingText">
-              Helping a local business reinvent itself
+        {/* Assurance Section */}
+        <section className="flex bg-[#f5f7fa] p-16 justify-center items-center gap-32">
+          <div className="max-w-md">
+            <p className="text-3xl font-medium text-gray-800 leading-snug">
+              Helping a local{" "}
+              <span className="text-[#4caf4f]">business reinvent itself</span>
             </p>
-            <p className="">
+            <p className="mt-4 text-gray-600">
               We reached here with our hard work and dedication
             </p>
           </div>
-          <div>
-            <div>
-              <img src={Assurance1}></img>
+
+          <div className="grid grid-cols-2 gap-x-10 gap-y-6">
+            <div className="flex items-center gap-4">
+              <img src={Assurance1} className="w-10 h-10" />
               <div>
-                <p>2,245,341</p>
-                <p>Members</p>
+                <p className="text-lg font-semibold text-gray-800">2,245,341</p>
+                <p className="text-sm text-gray-500">Members</p>
               </div>
             </div>
-            <div>
-              <img src={Assurance2}></img>
+
+            <div className="flex items-center gap-4">
+              <img src={Assurance2} className="w-10 h-10" />
               <div>
-                <p>46,328</p>
-                <p>Clubs</p>
+                <p className="text-lg font-semibold text-gray-800">46,328</p>
+                <p className="text-sm text-gray-500">Clubs</p>
               </div>
             </div>
-            <div>
-              <img src={Assurance3}></img>
+
+            <div className="flex items-center gap-4">
+              <img src={Assurance3} className="w-10 h-10" />
               <div>
-                <p>828,867</p>
-                <p>Event Bookings</p>
+                <p className="text-lg font-semibold text-gray-800">828,867</p>
+                <p className="text-sm text-gray-500">Event Bookings</p>
               </div>
             </div>
-            <div>
-              <img src={Assurance4}></img>
+
+            <div className="flex items-center gap-4">
+              <img src={Assurance4} className="w-10 h-10" />
               <div>
-                <p>1,926,436</p>
-                <p>Payments</p>
+                <p className="text-lg font-semibold text-gray-800">1,926,436</p>
+                <p className="text-sm text-gray-500">Payments</p>
               </div>
             </div>
           </div>
         </section>
-        <section className="designSection">
-          <img src={DesignIllustration}></img>
-          <div>
-            <p className="headingText">
+        {/* Design Section */}
+        <section className="flex items-center justify-center gap-16 p-16 bg-white">
+          <img
+            src={DesignIllustration}
+            alt="Design Illustration"
+            className="w-[40%] max-w-md"
+          />
+
+          <div className="max-w-xl">
+            <p className="text-3xl font-semibold text-gray-800 mb-4">
               How to design your site footer like we did
             </p>
-            <p className="grayLink">
+            <p className="text-gray-600 mb-6">
               Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
               augue nec tincidunt molestie, massa nunc varius arcu, at
               scelerisque elit erat a magna. Donec quis erat at libero ultrices
@@ -217,13 +229,20 @@ function App() {
               et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus
               ipsum id gravida.
             </p>
-            <button className="primaryButton">Learn More</button>
+            <button className="bg-[#4caf4f] text-white px-6 py-2 rounded hover:bg-[#43a047] transition">
+              Learn More
+            </button>
           </div>
         </section>
-        <section className="customerSection">
-          <img className={CustomerPhoto}></img>
-          <div>
-            <p>
+        <section className="flex items-start gap-10 p-10 bg-[#f5f7fa]">
+          <img
+            src={CustomerPhoto}
+            alt="Customer"
+            className="w-56 h-56 rounded-lg object-cover"
+          />
+
+          <div className="max-w-3xl">
+            <p className="text-gray-600 mb-4">
               Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
               lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
               enim metus. Vivamus sed libero ornare, tristique quam in, gravida
@@ -236,81 +255,90 @@ function App() {
               condimentum id. Curabitur id nibh id sem dignissim finibus ac sit
               amet magna.
             </p>
-            <p>Tim Smith</p>
-            <p>British Dragon Boat Racing Association</p>
-            <div>
-              <ul>
-                <li>
-                  <img src={Client1}></img>
-                </li>
-                <li>
-                  <img src={Client2}></img>
-                </li>
-                <li>
-                  <img src={Client3}></img>
-                </li>
-                <li>
-                  <img src={Client4}></img>
-                </li>
-                <li>
-                  <img src={Client5}></img>
-                </li>
-                <li>
-                  <img src={Client6}></img>
-                </li>
-              </ul>
-              <button className="secondaryButton">
-                <p>Meet all customers</p>
-                <img className={Arrow}></img>
+            <p className="text-[#4caf4f] font-medium">Tim Smith</p>
+            <p className="text-sm text-gray-500 mb-6">
+              British Dragon Boat Racing Association
+            </p>
+
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div className="flex gap-4">
+                <img src={Client1} className="h-6" />
+                <img src={Client2} className="h-6" />
+                <img src={Client3} className="h-6" />
+                <img src={Client4} className="h-6" />
+                <img src={Client5} className="h-6" />
+                <img src={Client6} className="h-6" />
+              </div>
+
+              <button className="flex items-center text-[#4caf4f] font-medium hover:underline">
+                Meet all customers
+                <img src={Arrow} className="ml-2 w-4 h-4" />
               </button>
             </div>
           </div>
         </section>
-        <section className="readMoreSection">
-          <div>
-            <p className="headingText">Caring is the new marketing</p>
-            <p>
+
+        <section className="py-16 bg-white">
+          <div className="max-w-5xl mx-auto text-center px-4">
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
+              Caring is the new marketing
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
               The Nexcent blog is the best place to read about the latest
               membership insights, trends and more. See who's joining the
               community, read about how our community are increasing their
               membership income and lot's more.
             </p>
           </div>
-          <div>
-            <div>
-              <img className={ReadMorePhoto1}></img>
-              <div>
-                <p className="headingText">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
+            {/* Card 1 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <img
+                src={ReadMorePhoto1}
+                alt="OneRen"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-5">
+                <p className="font-medium text-gray-800 mb-4">
                   Creating Streamlined Safeguarding Processes with OneRen
                 </p>
-                <button className="secondaryButton">
-                  <p>Readmore</p>
-                  <img className={Arrow}></img>
+                <button className="text-green-600 font-semibold flex items-center gap-2 hover:underline">
+                  Readmore <img src={Arrow} alt="arrow" className="w-4 h-4" />
                 </button>
               </div>
             </div>
-            <div>
-              <img className={ReadMorePhoto2}></img>
-              <div>
-                <p className="headingText">
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <img
+                src={ReadMorePhoto2}
+                alt="Safeguarding"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-5">
+                <p className="font-medium text-gray-800 mb-4">
                   What are your safeguarding responsibilities and how can you
                   manage them?
                 </p>
-                <button className="secondaryButton">
-                  <p>Readmore</p>
-                  <img className={Arrow}></img>
+                <button className="text-green-600 font-semibold flex items-center gap-2 hover:underline">
+                  Readmore <img src={Arrow} alt="arrow" className="w-4 h-4" />
                 </button>
               </div>
             </div>
-            <div>
-              <img className={ReadMorePhoto3}></img>
-              <div>
-                <p className="headingText">
+
+            {/* Card 3 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <img
+                src={ReadMorePhoto3}
+                alt="Triathlon"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-5">
+                <p className="font-medium text-gray-800 mb-4">
                   Revamping the Membership Model with Triathlon Australia
                 </p>
-                <button className="secondaryButton">
-                  <p>Readmore</p>
-                  <img className={Arrow}></img>
+                <button className="text-green-600 font-semibold flex items-center gap-2 hover:underline">
+                  Readmore <img src={Arrow} alt="arrow" className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -326,41 +354,44 @@ function App() {
           </button>
         </section>
       </main>
-      <footer>
-        <section>
+      <footer className="bg-gray-900 text-white py-12 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Logo + Social */}
           <div>
-            <img src={Icon}></img>
-            <p>Nexcent</p>
+            <div className="flex items-center gap-2 mb-4">
+              <img src={Icon} alt="Nexcent Logo" className="h-6 w-auto" />
+              <p className="text-lg font-semibold">Nexcent</p>
+            </div>
+            <p className="text-sm text-gray-400">
+              Copyright © 2020 Nexcent ltd.
+            </p>
+            <p className="text-sm text-gray-400 mb-4">All rights reserved</p>
+            <ul className="flex items-center gap-4 mt-2">
+              <li>
+                <img src={Instagram} alt="Instagram" className="h-5 w-5" />
+              </li>
+              <li>
+                <div>
+                  <img src={Ball} alt="Dribbble" className="h-5 w-5" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src={Twitter} alt="Twitter" className="h-5 w-5" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src={Youtube} alt="YouTube" className="h-5 w-5" />
+                </div>
+              </li>
+            </ul>
           </div>
+
+          {/* Company */}
           <div>
-            <p>Copyright © 2020 Nexcent ltd.</p>
-            <p>All rights reserved</p>
-          </div>
-          <ul>
-            <li>
-              <img src={Instagram}></img>
-            </li>
-            <li>
-              <div>
-                <img src={Ball}></img>
-              </div>
-            </li>
-            <li>
-              <div>
-                <img src={Twitter}></img>
-              </div>
-            </li>
-            <li>
-              <div>
-                <img src={Youtube}></img>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <div>
-            <p>Company</p>
-            <ul>
+            <p className="font-semibold mb-4">Company</p>
+            <ul className="space-y-2 text-sm text-gray-400">
               <li>About us</li>
               <li>Blog</li>
               <li>Contact us</li>
@@ -368,22 +399,36 @@ function App() {
               <li>Testimonials</li>
             </ul>
           </div>
-          <p>Support</p>
-          <ul>
-            <li>Help center</li>
-            <li>Terms of service</li>
-            <li>Legal</li>
-            <li>Privacy policy</li>
-            <li>Status</li>
-          </ul>
+
+          {/* Support */}
           <div>
-            <p>Stay up to date</p>
-            <div>
-              <input></input>
-              <img src={Send}></img>
+            <p className="font-semibold mb-4">Support</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>Help center</li>
+              <li>Terms of service</li>
+              <li>Legal</li>
+              <li>Privacy policy</li>
+              <li>Status</li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <p className="font-semibold mb-4">Stay up to date</p>
+            <div className="flex items-center bg-gray-800 rounded-md overflow-hidden p-1">
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="bg-transparent px-3 py-2 w-full text-sm text-white placeholder-gray-400 focus:outline-none"
+              />
+              <img
+                src={Send}
+                alt="Send"
+                className="h-5 w-5 mr-3 cursor-pointer"
+              />
             </div>
           </div>
-        </section>
+        </div>
       </footer>
     </>
   );
