@@ -20,7 +20,7 @@ const ReadMoreSection = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="mx-auto mt-16 max-w-7xl px-4">
+      <div className="mx-auto mt-16 max-w-6xl">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Card 1 */}
           <div className="group relative">
