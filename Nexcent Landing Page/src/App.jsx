@@ -8,6 +8,7 @@ import AssuranceSection from "./Main Section/AssuranceSection.jsx";
 import DesignSection from "./Main Section/DesignSection.jsx";
 import CustomerSection from "./Main Section/CustomerSection.jsx";
 import ReadMoreSection from "./Main Section/ReadMoreSection.jsx";
+import DemoSection from "./Main Section/DemoSection.jsx";
 import FooterSection from "./FooterSection.jsx";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <DesignSection />
         <CustomerSection />
         <ReadMoreSection />
+        <DemoSection />
       </main>
 
       <FooterSection />

@@ -5,56 +5,106 @@ import Arrow from "../assets/arrow.png";
 
 const ReadMoreSection = () => {
   return (
-    <section className="bg-white py-16">
-      <div className="mx-auto max-w-5xl px-4 text-center">
-        <h2 className="mb-4 text-2xl font-semibold text-gray-800 md:text-3xl">
+    <section className="bg-gray-50 py-16">
+      <div className="mx-auto max-w-6xl px-4 text-center">
+        {/* Header Section */}
+        <h2 className="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">
           Caring is the new marketing
         </h2>
-        <p className="mx-auto max-w-2xl text-gray-600">
+        <p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-600">
           The Nexcent blog is the best place to read about the latest membership
           insights, trends and more. See who's joining the community, read about
           how our community are increasing their membership income and lot's
           more.
         </p>
       </div>
-      <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-6 px-4 md:grid-cols-3">
-        {/* Card 1 */}
-        <div className="overflow-hidden rounded-xl bg-white shadow-md">
-          <img src={ReadMorePhoto1} className="h-48 w-full object-cover" />
-          <div className="p-5">
-            <p className="mb-4 font-medium text-gray-800">
-              Creating Streamlined Safeguarding Processes with OneRen
-            </p>
-            <button className="flex items-center gap-2 font-semibold text-green-600 hover:underline">
-              Readmore <img src={Arrow} alt="arrow" className="h-4 w-4" />
-            </button>
-          </div>
-        </div>
 
-        {/* Card 2 */}
-        <div className="overflow-hidden rounded-xl bg-white shadow-md">
-          <img src={ReadMorePhoto2} className="h-48 w-full object-cover" />
-          <div className="p-5">
-            <p className="mb-4 font-medium text-gray-800">
-              What are your safeguarding responsibilities and how can you manage
-              them?
-            </p>
-            <button className="flex items-center gap-2 font-semibold text-green-600 hover:underline">
-              Readmore <img src={Arrow} alt="arrow" className="h-4 w-4" />
-            </button>
+      {/* Cards Grid */}
+      <div className="mx-auto mt-16 max-w-7xl px-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* Card 1 */}
+          <div className="group relative">
+            <div className="relative h-96 w-full">
+              <div className="h-64 w-full overflow-hidden rounded-t-xl">
+                <img
+                  src={ReadMorePhoto1}
+                  alt="Creating Streamlined Safeguarding Processes"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute top-45 left-1/2 w-11/12 max-w-sm -translate-x-1/2 transform cursor-pointer rounded-xl bg-white p-6 shadow-xl transition-all duration-300 group-hover:-translate-y-4 group-hover:shadow-2xl">
+                <h3 className="mb-4 text-center text-lg leading-snug font-semibold text-gray-700">
+                  Creating Streamlined Safeguarding Processes with OneRen
+                </h3>
+                <div className="flex items-center justify-center">
+                  <button className="flex items-center gap-2 text-sm font-semibold text-green-500 transition-all duration-200 group-hover:gap-3 hover:text-green-600">
+                    Readmore
+                    <img
+                      src={Arrow}
+                      alt="arrow"
+                      className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Card 3 */}
-        <div className="overflow-hidden rounded-xl bg-white shadow-md">
-          <img src={ReadMorePhoto3} className="h-48 w-full object-cover" />
-          <div className="p-5">
-            <p className="mb-4 font-medium text-gray-800">
-              Revamping the Membership Model with Triathlon Australia
-            </p>
-            <button className="flex items-center gap-2 font-semibold text-green-600 hover:underline">
-              Readmore <img src={Arrow} alt="arrow" className="h-4 w-4" />
-            </button>
+          {/* Card 2 */}
+          <div className="group relative">
+            <div className="relative h-96 w-full">
+              <div className="h-64 w-full overflow-hidden rounded-t-xl">
+                <img
+                  src={ReadMorePhoto2}
+                  alt="Safeguarding responsibilities"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute top-45 left-1/2 w-11/12 max-w-sm -translate-x-1/2 transform cursor-pointer rounded-xl bg-white p-6 shadow-xl transition-all duration-300 group-hover:-translate-y-4 group-hover:shadow-2xl">
+                <h3 className="mb-4 text-center text-lg leading-snug font-semibold text-gray-700">
+                  What are your safeguarding responsibilities and how can you
+                  manage them?
+                </h3>
+                <div className="flex items-center justify-center">
+                  <button className="flex items-center gap-2 text-sm font-semibold text-green-500 transition-all duration-200 group-hover:gap-3 hover:text-green-600">
+                    Readmore
+                    <img
+                      src={Arrow}
+                      alt="arrow"
+                      className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="group relative">
+            <div className="relative h-96 w-full">
+              <div className="h-64 w-full overflow-hidden rounded-xl">
+                <img
+                  src={ReadMorePhoto3}
+                  alt="Membership Model with Triathlon Australia"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute top-45 left-1/2 w-11/12 max-w-sm -translate-x-1/2 transform cursor-pointer rounded-xl bg-white p-6 shadow-xl transition-all duration-300 group-hover:-translate-y-4 group-hover:shadow-2xl">
+                <h3 className="mb-4 text-center text-lg leading-snug font-semibold text-gray-700">
+                  Revamping the Membership Model with Triathlon Australia
+                </h3>
+                <div className="flex items-center justify-center">
+                  <button className="flex items-center gap-2 text-sm font-semibold text-green-500 transition-all duration-200 group-hover:gap-3 hover:text-green-600">
+                    Readmore
+                    <img
+                      src={Arrow}
+                      alt="arrow"
+                      className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
