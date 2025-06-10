@@ -12,7 +12,7 @@ const SuitableSection = () => {
         <p className="text-[#717171]">Who is Nexcent suitable for?</p>
       </div>
       <div className="flex w-full justify-between">
-        <div className="flex w-[18vw] flex-col items-center justify-center gap-[1em] rounded-[10px] bg-white p-[2em] text-center shadow-md">
+        <div className="flex w-[18vw] flex-col items-center justify-center gap-[1em] rounded-[10px] bg-white p-[2em] text-center shadow-sm">
           <img src={SuitableClient1}></img>
           <p className="text-[2em] font-semibold text-[#4d4d4d]">
             Membership Organisations
@@ -22,7 +22,7 @@ const SuitableSection = () => {
             membership renewals and payments
           </p>
         </div>
-        <div className="flex w-[18vw] flex-col items-center justify-center gap-[1em] rounded-[10px] bg-white p-[2em] text-center shadow-md">
+        <div className="flex w-[18vw] flex-col items-center justify-center gap-[1em] rounded-[10px] bg-white p-[2em] text-center shadow-sm">
           <img src={SuitableClient2}></img>
           <p className="text-[2em] font-semibold text-[#4d4d4d]">
             National Associations
@@ -32,7 +32,7 @@ const SuitableSection = () => {
             membership renewals and payments
           </p>
         </div>
-        <div className="flex w-[18vw] flex-col items-center justify-center gap-[1em] rounded-[10px] bg-white p-[2em] text-center shadow-md">
+        <div className="flex w-[18vw] flex-col items-center justify-center gap-[1em] rounded-[10px] bg-white p-[2em] text-center shadow-sm">
           <img src={SuitableClient3}></img>
           <p className="text-[2em] font-semibold text-[#4d4d4d]">
             Clubs And Groups

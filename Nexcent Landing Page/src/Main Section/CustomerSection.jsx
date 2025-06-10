@@ -10,11 +10,11 @@ import Arrow from "../assets/arrow.png";
 const CustomerSection = () => {
   return (
     <section className="bg-[#f5f7fa]">
-      <div className="mx-auto flex max-w-7xl items-start justify-between py-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between py-10">
         <img
           src={CustomerPhoto}
           alt="Customer"
-          className="h-full rounded-lg object-cover"
+          className="rounded-lg object-cover"
         />
 
         <div className="max-w-2xl">

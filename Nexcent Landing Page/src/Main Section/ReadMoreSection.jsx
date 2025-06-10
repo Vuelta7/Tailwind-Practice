@@ -37,7 +37,7 @@ const ReadMoreSection = () => {
                   Creating Streamlined Safeguarding Processes with OneRen
                 </h3>
                 <div className="flex items-center justify-center">
-                  <button className="flex items-center gap-2 text-sm font-semibold text-green-500 transition-all duration-200 group-hover:gap-3 hover:text-green-600">
+                  <button className="flex items-center gap-2 text-lg font-semibold text-green-500 transition-all duration-200 group-hover:gap-3 hover:text-green-600">
                     Readmore
                     <img src={Arrow} alt="arrow" />
                   </button>
@@ -62,13 +62,9 @@ const ReadMoreSection = () => {
                   manage them?
                 </h3>
                 <div className="flex items-center justify-center">
-                  <button className="flex items-center gap-2 text-sm font-semibold text-green-500 transition-all duration-200 group-hover:gap-3 hover:text-green-600">
+                  <button className="flex items-center gap-2 text-lg font-semibold text-green-500 transition-all duration-200 group-hover:gap-3 hover:text-green-600">
                     Readmore
-                    <img
-                      src={Arrow}
-                      alt="arrow"
-                      className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
-                    />
+                    <img src={Arrow} alt="arrow" />
                   </button>
                 </div>
               </div>
@@ -90,13 +86,9 @@ const ReadMoreSection = () => {
                   Revamping the Membership Model with Triathlon Australia
                 </h3>
                 <div className="flex items-center justify-center">
-                  <button className="flex items-center gap-2 text-sm font-semibold text-green-500 transition-all duration-200 group-hover:gap-3 hover:text-green-600">
+                  <button className="flex items-center gap-2 text-lg font-semibold text-green-500 transition-all duration-200 group-hover:gap-3 hover:text-green-600">
                     Readmore
-                    <img
-                      src={Arrow}
-                      alt="arrow"
-                      className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
-                    />
+                    <img src={Arrow} alt="arrow" />
                   </button>
                 </div>
               </div>
