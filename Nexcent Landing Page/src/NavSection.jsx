@@ -3,7 +3,7 @@ import Logo from "./assets/Logo.png";
 const NavSection = () => {
   return (
     <nav className="bg-[#f5f7fa]">
-      <div className="mx-auto max-w-6xl py-[2em]">
+      <div className="mx-auto max-w-7xl">
         <div className="flex h-[10vh] items-center justify-between">
           <img src={Logo}></img>
           <ul className="flex list-none items-center gap-[3em] font-medium text-[#1f2937] no-underline">

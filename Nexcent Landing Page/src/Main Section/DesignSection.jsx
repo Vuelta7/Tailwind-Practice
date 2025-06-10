@@ -2,18 +2,18 @@ import DesignIllustration from "../assets/footerIllustration.png";
 
 const DesignSection = () => {
   return (
-    <section className="flex items-center justify-center gap-16 bg-white p-16">
+    <section className="mx-auto flex max-w-7xl items-center justify-between bg-white py-16">
       <img
         src={DesignIllustration}
         alt="Design Illustration"
         className="w-[40%] max-w-md"
       />
 
-      <div className="max-w-xl">
-        <p className="mb-4 text-3xl font-semibold text-gray-800">
+      <div className="max-w-lg">
+        <p className="mb-4 text-3xl font-semibold text-[#4d4d4d]">
           How to design your site footer like we did
         </p>
-        <p className="mb-6 text-gray-600">
+        <p className="mb-6 text-[#717171]">
           Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
           augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque
           elit erat a magna. Donec quis erat at libero ultrices mollis. In hac
