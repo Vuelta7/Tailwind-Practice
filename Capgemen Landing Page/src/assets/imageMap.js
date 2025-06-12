@@ -31,6 +31,9 @@ import youtube from "./youtube.png";
 import cart from "./cart.png";
 import search from "./search.png";
 import navbarToggler from "./navbar-toggler.png";
+import mobileHeaderCover from "./mobile-header-cover.png";
+import desktopHeaderCover from "./desktop-header-cover.png";
+import agentMobile from "./agent-mobile.png";
 
 const imageMap = {
   "advice-section1": advice1,
@@ -39,6 +42,7 @@ const imageMap = {
   "advice-section4": advice4,
 
   agent: agent,
+  agentMobile: agentMobile,
   aws: aws,
   bag: bag,
   "call-logo": callLogo,
@@ -64,6 +68,8 @@ const imageMap = {
   cart: cart,
   search: search,
   "navbar-toggler": navbarToggler,
+  mobileHeaderCover: mobileHeaderCover,
+  desktopHeaderCover: desktopHeaderCover,
 };
 
 export default imageMap;
