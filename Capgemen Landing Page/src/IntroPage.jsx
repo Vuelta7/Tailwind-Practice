@@ -6,7 +6,7 @@ const IntroPage = () => {
 
   return (
     <div className="relative h-[100vh] max-h-[100vh] overflow-hidden bg-[url(./assets/mobile-header-cover.png)] bg-cover bg-[50%_60%] bg-no-repeat sm:bg-[url(./assets/desktop-header-cover.png)]">
-      <nav className="">
+      <nav className="relative">
         {/* Main navigation bar container */}
         <div className="mx-auto flex max-w-7xl items-center justify-between px-10 py-6">
           <h1 className="text-primary-txt text-xl font-bold">Capgemen</h1>
@@ -58,25 +58,37 @@ const IntroPage = () => {
 
         {/* Mobile Menu Dropdown (conditionally rendered) */}
         {isMenuOpen && (
-          <div className="bg-transparent sm:hidden">
+          <div className="bg-secondary absolute top-full left-0 z-50 w-full rounded-b-[70px] shadow-[0_4px_30px_-1px_rgba(0,0,0,0.1)] sm:hidden">
             <ul className="space-y-2 px-4 pt-2 pb-4 text-center">
               <li>
-                <a href="#" className="text-secondary-txt block py-2 text-2xl">
+                <a
+                  href="#"
+                  className="block py-2 text-2xl font-semibold text-white"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="text-secondary-txt block py-2 text-2xl">
+                <a
+                  href="#"
+                  className="block py-2 text-2xl font-semibold text-white"
+                >
                   Product
                 </a>
               </li>
               <li>
-                <a href="#" className="text-secondary-txt block py-2 text-2xl">
+                <a
+                  href="#"
+                  className="block py-2 text-2xl font-semibold text-white"
+                >
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#" className="text-secondary-txt block py-2 text-2xl">
+                <a
+                  href="#"
+                  className="block py-2 text-2xl font-semibold text-white"
+                >
                   Contact
                 </a>
               </li>
