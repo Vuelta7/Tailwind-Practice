@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>YouTube Clone</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-[#0f0f0f] text-white">
+    <header
+      class="fixed top-0 right-0 left-0 z-50 flex h-14 items-center justify-between bg-[#0f0f0f] px-4 text-white"
+    >
+      <!-- Left Header: Menu + Logo -->
+      <div class="flex items-center">
+        <button class="mr-4 rounded-full p-2 hover:bg-[#272727]">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <a href="#" class="flex items-center">
+          <img src="./assets/ytlogo.png" class="mr-1 h-6 text-red-600" />
+          <span class="text-xl font-normal">YouTube</span>
+        </a>
+      </div>
+
+      <!-- Center Search Bar -->
+      <div class="mx-10 flex max-w-2xl flex-1 items-center">
+        <div class="flex w-full max-w-xl">
+          <input
+            type="text"
+            placeholder="Search"
+            class="h-10 flex-1 rounded-l-full border border-[#303030] bg-[#121212] px-4 text-sm text-white placeholder-gray-400 focus:border-[#1c62b9] focus:outline-none"
+          />
+          <button
+            class="flex h-10 items-center justify-center rounded-r-full border border-l-0 border-[#303030] bg-[#222222] px-6 hover:bg-[#3c3c3c]"
+          >
+            <svg
+              class="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+        </div>
+        <button class="ml-2 rounded-full bg-[#181818] p-2 hover:bg-[#272727]">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Right Header: Create + Apps + Notifications + Profile -->
+      <div class="flex items-center space-x-2">
+        <button class="rounded-full p-2 hover:bg-[#272727]">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 4v16m8-8H4"
+            />
+          </svg>
+        </button>
+        <button class="rounded-full p-2 hover:bg-[#272727]">
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+          </svg>
+        </button>
+        <button class="rounded-full p-2 hover:bg-[#272727]">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 17h5l-5 5v-5zM15 17H7a2 2 0 01-2-2V9a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="flex h-8 w-8 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white hover:bg-orange-600"
+        >
+          G
+        </button>
+      </div>
+    </header>
+
+    <div class="flex pt-14">
+      <!-- Sidebar -->
+      <aside
+        class="fixed top-14 left-0 h-[calc(100vh-56px)] w-60 overflow-y-auto bg-[#0f0f0f] px-3 py-2"
+      >
+        <!-- Main Navigation -->
+        <nav class="mb-4">
+          <ul class="space-y-1">
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                </svg>
+                Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M9.5 16.5c0 2-2.5 3.5-2.5 3.5s-2.5-1.5-2.5-3.5S6.5 13 9.5 13s2.5 1.5 2.5 3.5z"
+                  />
+                </svg>
+                Explore</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18 3v2h-2V3H8v2H6V3H4v18h2v-2h2v2h8v-2h2v2h2V3h-2z"
+                  />
+                </svg>
+                Subscriptions</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+                Library</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"
+                  />
+                </svg>
+                History</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 8v8l5-4-5-4zm9-5H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+                Your Videos</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+                Watch Later</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+                Liked Videos</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                </svg>
+                Show More</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <hr class="mb-4 border-[#303030]" />
+
+        <!-- Subscriptions List -->
+        <div class="mb-4">
+          <h4 class="px-3 py-2 text-sm font-medium text-white">
+            Subscriptions
+          </h4>
+          <ul class="space-y-1">
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <button
+                  class="mr-6 flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 text-xs font-bold text-white"
+                >
+                  J
+                </button>
+                James Gouse</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <button
+                  class="mr-6 flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-xs font-bold text-white"
+                >
+                  A
+                </button>
+                Alan Cooper</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <button
+                  class="mr-6 flex h-6 w-6 items-center justify-center rounded-full bg-purple-500 text-xs font-bold text-white"
+                >
+                  M
+                </button>
+                Marcus Levin</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <button
+                  class="mr-6 flex h-6 w-6 items-center justify-center rounded-full bg-pink-500 text-xs font-bold text-white"
+                >
+                  A
+                </button>
+                Alexis Sears</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <button
+                  class="mr-6 flex h-6 w-6 items-center justify-center rounded-full bg-yellow-500 text-xs font-bold text-white"
+                >
+                  J
+                </button>
+                Jessica Lambert</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <button
+                  class="mr-6 flex h-6 w-6 items-center justify-center rounded-full bg-red-500 text-xs font-bold text-white"
+                >
+                  A
+                </button>
+                Anna White</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <button
+                  class="mr-6 flex h-6 w-6 items-center justify-center rounded-full bg-indigo-500 text-xs font-bold text-white"
+                >
+                  S
+                </button>
+                Skylar Dias</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                </svg>
+                Show 13 more</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <hr class="mb-4 border-[#303030]" />
+
+        <!-- More From YouTube -->
+        <div class="mb-4">
+          <h4 class="px-3 py-2 text-sm font-medium text-white">
+            More From YouTube
+          </h4>
+          <ul class="space-y-1">
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6 text-red-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 8v8l5-4-5-4zm9-5H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+                YouTube Premium</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M21,6V8H3V6H21M3,18V16H21V18H3M3,13H21V11H3V13Z" />
+                </svg>
+                Gaming</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center rounded-lg px-3 py-2 text-sm hover:bg-[#272727]"
+              >
+                <svg
+                  class="mr-6 h-6 w-6 text-red-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                  />
+                </svg>
+                Live</a
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="ml-60 flex-1 p-6">
+        <!-- Filter Bar -->
+        <section class="mb-6 flex space-x-3 overflow-x-auto pb-2">
+          <button
+            class="rounded-lg bg-white px-3 py-1 text-sm font-medium whitespace-nowrap text-black hover:bg-gray-200"
+          >
+            All
+          </button>
+          <button
+            class="rounded-lg bg-[#272727] px-3 py-1 text-sm font-medium whitespace-nowrap text-white hover:bg-[#3c3c3c]"
+          >
+            Music
+          </button>
+          <button
+            class="rounded-lg bg-[#272727] px-3 py-1 text-sm font-medium whitespace-nowrap text-white hover:bg-[#3c3c3c]"
+          >
+            Gaming
+          </button>
+          <button
+            class="rounded-lg bg-[#272727] px-3 py-1 text-sm font-medium whitespace-nowrap text-white hover:bg-[#3c3c3c]"
+          >
+            Comedy
+          </button>
+          <button
+            class="rounded-lg bg-[#272727] px-3 py-1 text-sm font-medium whitespace-nowrap text-white hover:bg-[#3c3c3c]"
+          >
+            Tech
+          </button>
+          <button
+            class="rounded-lg bg-[#272727] px-3 py-1 text-sm font-medium whitespace-nowrap text-white hover:bg-[#3c3c3c]"
+          >
+            Sports
+          </button>
+          <button
+            class="rounded-lg bg-[#272727] px-3 py-1 text-sm font-medium whitespace-nowrap text-white hover:bg-[#3c3c3c]"
+          >
+            News
+          </button>
+          <button
+            class="rounded-lg bg-[#272727] px-3 py-1 text-sm font-medium whitespace-nowrap text-white hover:bg-[#3c3c3c]"
+          >
+            Education
+          </button>
+          <button
+            class="rounded-lg bg-[#272727] px-3 py-1 text-sm font-medium whitespace-nowrap text-white hover:bg-[#3c3c3c]"
+          >
+            Movies
+          </button>
+          <button
+            class="rounded-lg bg-[#272727] px-3 py-1 text-sm font-medium whitespace-nowrap text-white hover:bg-[#3c3c3c]"
+          >
+            Travel
+          </button>
+          <button
+            class="rounded-lg bg-[#272727] px-3 py-1 text-sm font-medium whitespace-nowrap text-white hover:bg-[#3c3c3c]"
+          >
+            Cooking
+          </button>
+        </section>
+
+        <!-- Video Grid -->
+        <section
+          class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        >
+          <!-- Video Card 1 -->
+          <article class="cursor-pointer">
+            <!-- Thumbnail with duration -->
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-black"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >23:45</span
+              >
+            </div>
+
+            <!-- Video Info -->
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white hover:bg-blue-600"
+              >
+                J
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  James Gouse
+                </p>
+                <p class="text-sm text-[#aaa]">15K Views • 1 week ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 2 -->
+          <article class="cursor-pointer">
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-gray-900"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >15:32</span
+              >
+            </div>
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-green-500 text-sm font-bold text-white hover:bg-green-600"
+              >
+                A
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  Amazing tutorial for web development beginners
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  Alan Cooper
+                </p>
+                <p class="text-sm text-[#aaa]">32K Views • 3 days ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 3 -->
+          <article class="cursor-pointer">
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-gray-800"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >8:15</span
+              >
+            </div>
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-purple-500 text-sm font-bold text-white hover:bg-purple-600"
+              >
+                M
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  Top 10 JavaScript tips every developer should know
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  Marcus Levin
+                </p>
+                <p class="text-sm text-[#aaa]">128K Views • 2 weeks ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 4 -->
+          <article class="cursor-pointer">
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-gray-700"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >45:20</span
+              >
+            </div>
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-pink-500 text-sm font-bold text-white hover:bg-pink-600"
+              >
+                A
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  Complete React course for beginners to advanced
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  Alexis Sears
+                </p>
+                <p class="text-sm text-[#aaa]">89K Views • 5 days ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 5 -->
+          <article class="cursor-pointer">
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-gray-600"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >12:45</span
+              >
+            </div>
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-yellow-500 text-sm font-bold text-white hover:bg-yellow-600"
+              >
+                J
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  UI/UX design principles that will change your perspective
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  Jessica Lambert
+                </p>
+                <p class="text-sm text-[#aaa]">67K Views • 1 week ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 6 -->
+          <article class="cursor-pointer">
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-gray-500"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >7:30</span
+              >
+            </div>
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-red-500 text-sm font-bold text-white hover:bg-red-600"
+              >
+                A
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  Quick CSS Grid tutorial for responsive layouts
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  Anna White
+                </p>
+                <p class="text-sm text-[#aaa]">45K Views • 4 days ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 7 -->
+          <article class="cursor-pointer">
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-gray-400"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >18:22</span
+              >
+            </div>
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-indigo-500 text-sm font-bold text-white hover:bg-indigo-600"
+              >
+                S
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  Modern JavaScript ES6+ features you need to know
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  Skylar Dias
+                </p>
+                <p class="text-sm text-[#aaa]">156K Views • 6 days ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 8 -->
+          <article class="cursor-pointer">
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-gray-800"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >25:10</span
+              >
+            </div>
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 text-sm font-bold text-white hover:bg-teal-600"
+              >
+                T
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  Building a full-stack application with Node.js and MongoDB
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  Tech Master
+                </p>
+                <p class="text-sm text-[#aaa]">203K Views • 1 month ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 9 -->
+          <article class="cursor-pointer">
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-slate-700"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >11:55</span
+              >
+            </div>
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-cyan-500 text-sm font-bold text-white hover:bg-cyan-600"
+              >
+                C
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  Advanced CSS animations and transitions
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  Code Academy
+                </p>
+                <p class="text-sm text-[#aaa]">78K Views • 2 weeks ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 10 -->
+          <article class="cursor-pointer">
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-zinc-600"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >33:18</span
+              >
+            </div>
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white hover:bg-orange-600"
+              >
+                D
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  Docker containerization tutorial for beginners
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  DevOps Pro
+                </p>
+                <p class="text-sm text-[#aaa]">142K Views • 3 weeks ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 11 -->
+          <article class="cursor-pointer">
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-stone-600"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >16:42</span
+              >
+            </div>
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-500 text-sm font-bold text-white hover:bg-lime-600"
+              >
+                V
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  Vue.js 3 composition API complete guide
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  Vue Master
+                </p>
+                <p class="text-sm text-[#aaa]">95K Views • 1 week ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 12 -->
+          <article class="cursor-pointer">
+            <div class="relative mb-3">
+              <div class="aspect-video w-full rounded-xl bg-neutral-700"></div>
+              <span
+                class="bg-opacity-80 absolute right-2 bottom-2 rounded bg-black px-1 py-0.5 text-xs font-medium text-white"
+                >9:28</span
+              >
+            </div>
+            <div class="flex">
+              <button
+                class="mr-3 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-rose-500 text-sm font-bold text-white hover:bg-rose-600"
+              >
+                P
+              </button>
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="mb-1 line-clamp-2 text-sm leading-5 font-medium text-white"
+                >
+                  Python data science essentials in 10 minutes
+                </h3>
+                <p class="cursor-pointer text-sm text-[#aaa] hover:text-white">
+                  Python Guru
+                </p>
+                <p class="text-sm text-[#aaa]">234K Views • 5 days ago</p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
