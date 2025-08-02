@@ -38,10 +38,10 @@ export default function Home() {
       </div>
 
       {/* Bottom button */}
-      <div className="px-8 pb-20">
+      <div className="px-8 pb-20 mx-auto">
         <button
           onClick={() => router.push("/auth/register")}
-          className="w-full bg-[#50C2C9] text-white rounded-lg py-4 text-[18px] font-bold shadow-sm mb-6"
+          className="w-[350px] bg-[#50C2C9] text-white rounded-lg py-4 text-[18px] font-bold shadow-sm mb-6"
         >
           Get Started
         </button>

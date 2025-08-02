@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capgemen</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    .bg-cover {
+      background-image: url("path/to/your-image.jpg");
+      background-size: cover; /* cover, contain, or exact values */
+      background-repeat: no-repeat; /* prevents tiling */
+      background-position: center; /* or top, bottom, left, right */
+    }
+  </style>
+  <body>
+    <!-- Top bar -->
+    <nav class="bg-white h-[35vh] w-[100vw]">
+      <div class="h-[10vh] flex p-[50px] justify-between w-[100vw]">
+        <p class="font-bold text-[#252B42] text-[60px] my-auto">Capgemen</p>
+        <div class="space-x-10 flex">
+          <img class="h-[70px] my-auto" src="search.png" alt="search" />
+          <img class="h-[60px] my-auto" src="cart.png" alt="cart" />
+          <img class="h-[40px] my-auto" src="menu.png" alt="menu" />
+        </div>
+      </div>
+      <div class="flex h-[25vh] flex-col">
+        <div class="text-[#737373] mx-auto space-y-14 text-6xl">
+          <p>Home</p>
+          <p>Product</p>
+          <p>Pricing</p>
+          <p>Contact</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <div
+      class="w-[100vw] h-[80vh] bg-[url('mobile-header-cover.png')] bg-cover bg-no-repeat bg-center relative"
+    >
+      <div class="pt-30 space-y-12 text-center mx-auto w-[80vw]">
+        <h1 class="font-bold text-8xl text-[#252B42]">
+          We Take Care of the Future
+        </h1>
+        <p class="text-5xl text-[#737373]">
+          We know how large objects will act, but things on a small scale.
+        </p>
+        <div class="space-y-8 flex items-center flex-col text-4xl">
+          <button class="px-12 py-8 bg-[#00A0C1] text-white rounded-[60px]">
+            Get Quote Now
+          </button>
+          <button
+            class="text-[#00A0C1] border px-12 py-8 border-[#00A0C1] rounded-[60px]"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+      <img src="agent.png" class="absolute w-[100vw] bottom-0" />
+    </div>
+
+    <!-- "Why Choose us" Section -->
+    <section class="text-center bg-white">
+      <div class="h-[20vh] px-[20vw] space-y-10 mt-80">
+        <h2 class="font-bold text-8xl text-[#252B42]">WHY CHOOSE US</h2>
+        <p class="text-4xl text-[#737373]">
+          Problems trying to resolve the conflict between the two major realms
+          of Classical physics: Newtonian mechanics
+        </p>
+      </div>
+
+      <div class="space-y-10 my-40">
+        <div
+          class="py-[80px] space-y-4 w-[80vw] flex flex-col mx-auto rounded-2xl shadow-xl items-center"
+        >
+          <img src="bag.png" class="w-[80px] h-[80px]" />
+          <p class="text-4xl font-bold text-[#252B42]">Web Development</p>
+        </div>
+
+        <div
+          class="py-[80px] space-y-4 bg-[#00A0C1] w-[80vw] flex flex-col mx-auto rounded-2xl items-center shadow-xl"
+        >
+          <img src="store.png" class="w-[80px] h-[80px]" />
+          <p class="font-bold text-white text-4xl">National top 50 firms</p>
+        </div>
+
+        <div
+          class="py-[80px] space-y-4 w-[80vw] flex flex-col items-center mx-auto rounded-2xl shadow-xl"
+        >
+          <img src="note.png" class="w-[80px] h-[80px]" />
+          <p class="text-4xl font-bold text-[#252B42]">Digital Marketing</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Advice -->
+    <section class="bg-[#F3F3F3]">
+      <div class="pt-50 text-center px-[20vw] space-y-10">
+        <h2 class="font-bold text-8xl text-[#252B42]">Practice Advice</h2>
+        <p class="text-4xl text-[#737373]">
+          Problems trying to resolve the conflict between the two major realms
+          of Classical physics: Newtonian mechanics
+        </p>
+      </div>
+      <div class="py-40 px-[25vw] space-y-16">
+        <div class="bg-white">
+          <div class="p-20 space-y-10">
+            <h4 class="font-bold text-4xl text-[#252B42]">
+              A single source of truth
+            </h4>
+            <p class="text-3xl text-[#737373]">
+              Newton thought that light was made up of particles, but then it
+              was discovered
+            </p>
+          </div>
+          <img class="w-full" src="advice-section1.png" />
+        </div>
+
+        <div class="bg-white">
+          <div class="p-20 space-y-10">
+            <h4 class="font-bold text-4xl text-[#252B42]">
+              Fastest way to organize
+            </h4>
+            <p class="text-3xl text-[#737373]">
+              “Quantum mechanics” is the description of the behaviour of matter
+            </p>
+          </div>
+          <img class="w-full" src="advice-section2.png" />
+        </div>
+
+        <div class="bg-white">
+          <div class="p-20 space-y-10">
+            <h4 class="font-bold text-4xl text-[#252B42]">
+              Fastest way to take action
+            </h4>
+            <p class="text-3xl text-[#737373]">
+              They describe a universe consisting of bodies moving
+            </p>
+          </div>
+          <img class="w-full" src="advice-section3.png" />
+        </div>
+
+        <div class="bg-white">
+          <div class="p-20 space-y-10">
+            <h4 class="font-bold text-4xl text-[#252B42]">
+              Work better together
+            </h4>
+            <p class="text-3xl text-[#737373]">
+              They finally obtained a consistent description of the behaviour
+            </p>
+          </div>
+          <img class="w-full" src="advice-section4.png" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Take care customer section -->
+    <section class="px-25 py-40">
+      <!-- Header -->
+      <div class="text-center space-y-10 pb-40">
+        <h2 class="font-bold text-8xl text-[#252B42]">
+          We take care customers our all expert here.
+        </h2>
+        <p class="text-4xl text-[#737373]">
+          Problems trying to resolve<br />
+          the conflict between the<br />
+          two major realms of Classical<br />
+          physics: Newtonian mechanics
+        </p>
+      </div>
+
+      <!-- Play Photo -->
+      <div class="pb-40">
+        <img class="h-[40vh] w-screen" src="card-item.png" />
+      </div>
+
+      <!-- Assurance Section -->
+      <div class="space-y-10">
+        <h2 class="font-bold text-8xl text-[#252B42]">
+          Most trusted in our field
+        </h2>
+        <p class="text-4xl text-[#737373]">
+          Most calendars are designed for teams. Slate<br />
+          is designed for freelancers who want a<br />
+          simple way to plan their schedule.
+        </p>
+      </div>
+      <div class="mt-20 space-y-14">
+        <div class="flex space-x-3">
+          <img class="w-20" src="peoples-icon.png" />
+          <div>
+            <h6 class="font-bold text-4xl text-[#252B42]">
+              the quick fox jumps over the lazy dog
+            </h6>
+            <p class="text-3xl text-[#737373]">
+              Things on a very small scale ...
+            </p>
+          </div>
+        </div>
+
+        <div class="flex space-x-3">
+          <img class="w-20" src="meter-logo.png" />
+          <div>
+            <h6 class="font-bold text-4xl text-[#252B42]">
+              the quick fox jumps over the lazy dog
+            </h6>
+            <p class="text-3xl text-[#737373]">
+              Things on a very small scale ...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted Company -->
+    <section
+      class="flex flex-col items-center justify-center space-y-7 bg-[#F3F3F3] py-15"
+    >
+      <img class="w-90" src="hooli.png" />
+      <img class="w-70" src="lya.png" />
+      <img class="w-70" src="leaf.png" />
+      <img class="w-70" src="stripe.png" />
+      <img class="w-70" src="aws.png" />
+      <img class="w-70" src="reddit.png" />
+    </section>
+
+    <!-- Subscribe form -->
+    <section class="py-20 space-y-12 px-25 bg-[#16697A]">
+      <h2 class="text-center font-bold text-white text-6xl">
+        Subscribe For Latest Newsletter
+      </h2>
+      <div class="text-4xl flex justify-center items-center">
+        <input
+          class="rounded-tl-[15px] rounded-bl-[15px] p-10 bg-white w-120"
+          type="text"
+          placeholder="Your Email"
+        />
+        <button
+          class="p-10 text-white rounded-tr-[15px] rounded-br-[15px] bg-[#FFA62B]"
+        >
+          <p>Subscribe</p>
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
