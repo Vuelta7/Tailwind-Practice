@@ -6,8 +6,8 @@ import info4 from "../assets/advice-section4.png";
 export default function ThirdPage() {
   return (
     <section className="bg-custom pb-20">
-      <div className="mx-auto w-[50vw]  text-center py-20  space-y-5">
-        <h3 className="text-4xl text-primary-text font-bold">
+      <div className="mx-auto w-[50vw] space-y-5 py-20 text-center">
+        <h3 className="text-primary-text text-4xl font-bold">
           Practice Advice
         </h3>
         <p className="text-secondary-text">
@@ -16,10 +16,10 @@ export default function ThirdPage() {
         </p>
       </div>
 
-      <div className="w-[230px] lg:w-[60vw] mx-auto space-y-10 lg:flex-row flex flex-col justify-between">
+      <div className="mx-auto flex w-[230px] flex-col justify-between space-y-10 lg:w-[60vw] lg:flex-row">
         <div className="w-[230px]">
-          <div className=" bg-white px-5 py-5 space-y-4">
-            <h6 className="font-bold text-lg text-primary-text">
+          <div className="space-y-4 bg-white px-5 py-5">
+            <h6 className="text-primary-text text-lg font-bold">
               A single source of truth
             </h6>
             <p className="text-secondary-text">
@@ -31,8 +31,8 @@ export default function ThirdPage() {
         </div>
 
         <div className="w-[230px]">
-          <div className=" bg-white px-5 py-5 space-y-4">
-            <h6 className="font-bold text-lg text-primary-text">
+          <div className="space-y-4 bg-white px-5 py-5">
+            <h6 className="text-primary-text text-lg font-bold">
               Fastest way to organize
             </h6>
             <p className="text-secondary-text">
@@ -43,8 +43,8 @@ export default function ThirdPage() {
         </div>
 
         <div className="w-[230px]">
-          <div className=" bg-white px-5 py-5 space-y-4">
-            <h6 className="font-bold text-lg text-primary-text">
+          <div className="space-y-4 bg-white px-5 py-5">
+            <h6 className="text-primary-text text-lg font-bold">
               Fastest way to take action
             </h6>
             <p className="text-secondary-text">
@@ -55,8 +55,8 @@ export default function ThirdPage() {
         </div>
 
         <div className="w-[230px]">
-          <div className=" bg-white px-5 py-5 space-y-4">
-            <h6 className="font-bold text-lg text-primary-text">
+          <div className="space-y-4 bg-white px-5 py-5">
+            <h6 className="text-primary-text text-lg font-bold">
               Work better together
             </h6>
             <p className="text-secondary-text">
