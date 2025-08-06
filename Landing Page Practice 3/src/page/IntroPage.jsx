@@ -5,9 +5,9 @@ import agent from "../assets/agent.png";
 
 export default function IntroPage() {
   return (
-    <header className="flex h-[100vh] flex-col overflow-hidden bg-[url('/mobile-header-cover.png')] bg-cover bg-center md:bg-[url('/desktop-header-cover.png')]">
+    <header className="flex h-[100vh] flex-col overflow-hidden bg-[url('/mobile-header-cover.png')] bg-cover bg-center md:bg-[url('/desktop-header-cover.png')] md:bg-bottom">
       {/* Responsive Nav bar */}
-      <nav className="flex items-center justify-between px-10 py-5">
+      <nav className="flex items-center justify-between p-5">
         <h4 className="text-primary-text p-3 text-2xl font-bold 2xl:ml-40">
           Capgemen
         </h4>
