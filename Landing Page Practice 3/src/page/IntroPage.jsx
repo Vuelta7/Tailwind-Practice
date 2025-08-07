@@ -8,7 +8,7 @@ export default function IntroPage() {
     <header className="flex h-[100vh] flex-col overflow-hidden bg-[url('/mobile-header-cover.png')] bg-cover bg-center md:bg-[url('/desktop-header-cover.png')] md:bg-bottom">
       {/* Responsive Nav bar */}
       <nav className="flex items-center justify-between p-5">
-        <h4 className="text-primary-text p-3 text-2xl font-bold 2xl:ml-40">
+        <h4 className="text-primary-text p-3 text-2xl font-bold 2xl:ml-30">
           Capgemen
         </h4>
         <div className="flex items-center space-x-5">
@@ -26,14 +26,14 @@ export default function IntroPage() {
 
       {/* Intro Page */}
       <section className="flex flex-1 flex-col justify-between md:mt-30 md:flex-row 2xl:mt-10">
-        <div className="mt-20 md:mt-40 md:ml-10 2xl:ml-50">
+        <div className="mt-20 md:mt-40 md:ml-10 xl:pb-20 2xl:ml-40">
           <div className="mb-8 flex flex-col items-center justify-center gap-8 text-center md:text-left">
-            <h1 className="text-primary-text text-4xl font-bold lg:text-6xl 2xl:text-8xl">
+            <h1 className="text-primary-text text-4xl font-bold 2xl:text-7xl">
               We Take Care
               <br />
               of the Future
             </h1>
-            <p className="text-secondary-text lg:text-2xl 2xl:text-4xl">
+            <p className="text-secondary-text 2xl:text-3xl">
               We know how large objects will act,
               <br />
               but things on a small scale.
@@ -41,7 +41,7 @@ export default function IntroPage() {
           </div>
 
           {/* Intro page dual button */}
-          <div class="flex flex-col items-center gap-4 lg:flex-row">
+          <div class="flex flex-col items-center gap-4 xl:flex-row">
             <button class="bg-secondary rounded-full px-8 py-3 font-semibold text-white shadow-md">
               Get Quote Now
             </button>
@@ -53,7 +53,7 @@ export default function IntroPage() {
         </div>
 
         <img
-          className="mx-auto w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl 2xl:max-w-3xl"
+          className="mx-auto w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl"
           src={agent}
         />
       </section>

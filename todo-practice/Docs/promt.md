@@ -1,47 +1,35 @@
+i dont really understand everything that u said but i manage to do this:
+
+```bash
+✔ Network todo-practice_default         Created                                                                                                                0.0s
+ ✔ Volume "todo-practice_postgres_data"  Created                                                                                                                0.0s
+ ✔ Container todo-practice-postgres-1    Started                                                                                                                4.6s
+
+uriel@Ultron MINGW64 ~/Tailwind-Practice/todo-practice (main)
+$ npx prisma db push
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+Datasource "db": PostgreSQL database "mydb", schema "public" at "localhost:5432"
+
+Your database is now in sync with your Prisma schema. Done in 138ms
+
+✔ Generated Prisma Client (v6.13.0) to .\src\generated\prisma in 257ms
+```
+
+Now how do I implement register in my "src/app/auth/register/page.tsx" that all I want to know my register/page.tsx currently look like this:
+
+```tsx
 "use client";
 import Circle from "../../components/bgCircle";
 import { useRouter } from "next/navigation";
-import { useUserStore } from "@/lib/useUserStore";
-import { useState } from "react";
 
 export default function Register() {
   const router = useRouter();
 
-  const setUsernameState = useUserStore((state) => state.setUsername);
-  const setUserIdState = useUserStore((state) => state.setUserId);
+  function registerAccount() {
+    // this is where I want to do the functionality to put it in the database
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-
-  async function registerAccount() {
-    console.log("VALUES:", { username, password, confirmPassword });
-
-    if (!username || !password || !confirmPassword) {
-      alert("Please fill in all fields.");
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      alert("Passwords do not match.");
-      return;
-    }
-
-    const res = await fetch("/api/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
-    });
-
-    const data = await res.json();
-
-    if (res.ok) {
-      setUsernameState("username");
-      setUserIdState(data.user.id);
-      router.push("/home");
-    } else {
-      alert(data.error || "Something went wrong.");
-    }
+    router.push("/home");
   }
 
   return (
@@ -64,22 +52,19 @@ export default function Register() {
         {/* Form inputs */}
         <div className="space-y-6 mb-10">
           <input
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            id="name"
             type="text"
             placeholder="Enter your username"
             className="w-full px-6 py-4 rounded-4xl bg-white  outline-none focus:ring-2 focus:ring-blue-400 text-black placeholder-black"
           />
           <input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            id="password"
             type="password"
             placeholder="Enter Password"
             className="w-full px-6 py-4 rounded-4xl bg-white outline-none focus:ring-2 focus:ring-blue-400 text-black placeholder-black"
           />
           <input
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
+            id="confirmPassword"
             type="password"
             placeholder="Confirm password"
             className="w-full px-6 py-4 rounded-4xl bg-white outline-none focus:ring-2 focus:ring-blue-400 text-black placeholder-black"
@@ -110,3 +95,6 @@ export default function Register() {
     </div>
   );
 }
+```
+
+what is my next step?
